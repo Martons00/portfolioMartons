@@ -10,11 +10,12 @@ export default function ThreeScene() {
     const container = mountRef.current
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(
-      50,
-      container.clientWidth / container.clientHeight,
-      0.1,
-      100
-    )
+      50,                                  // 1: FOV (field of view)
+      container.clientWidth / container.clientHeight, // 2: aspect ratio
+      0.1,                                 // 3: near plane
+      100                                  // 4: far plane
+    );
+
     camera.position.set(0, 1, 3)
     camera.lookAt(0, 0, 0)
 
@@ -34,25 +35,37 @@ export default function ThreeScene() {
 
     const controls = new OrbitControls(camera, renderer.domElement)
 
-    const loader = new GLTFLoader()
+    const clock = new THREE.Clock();
+    let mixer = null;
+
+    const loader = new GLTFLoader();
     loader.load(
       '/portfolioMartons/models/laptop.glb',
       (gltf) => {
-        const model = gltf.scene
-        model.position.set(0, 0, 0)
-        model.scale.set(50, 50, 50) // Aumenta la scala per modelli piccoli
+        const model = gltf.scene;
+        model.position.set(0, 0, 0);
+        model.rotateY(-Math.PI / 2);
+        model.scale.set(200, 200, 200);
 
-        // Centra il modello nella scena
-        const box = new THREE.Box3().setFromObject(model)
-        const center = box.getCenter(new THREE.Vector3())
-        model.position.sub(center)
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        model.position.sub(center);
 
-        scene.add(model)
-        console.log('Modello bounds:', box)
+        scene.add(model);
+
+        // NEW: imposta il mixer e avvia la prima animazione
+        if (gltf.animations && gltf.animations.length > 0) {
+          mixer = new THREE.AnimationMixer(model);
+          const action = mixer.clipAction(gltf.animations[0]); // o per nome clip
+          action.play();
+        }
+
+        console.log('Modello bounds:', box, gltf.animations);
       },
       undefined,
       (error) => console.error('Errore caricamento modello:', error)
-    )
+    );
+
 
     const onResize = () => {
       camera.aspect = container.clientWidth / container.clientHeight
@@ -62,11 +75,16 @@ export default function ThreeScene() {
     window.addEventListener('resize', onResize)
 
     const animate = () => {
-      requestAnimationFrame(animate)
-      controls.update()
-      renderer.render(scene, camera)
-    }
-    animate()
+      requestAnimationFrame(animate);
+      const delta = clock.getDelta();
+      if (mixer) {
+        mixer.update(delta);   // NEW: fa avanzare l’animazione
+      }
+      controls.update();
+      renderer.render(scene, camera);
+    };
+    animate();
+
 
     return () => {
       window.removeEventListener('resize', onResize)
@@ -76,5 +94,10 @@ export default function ThreeScene() {
     }
   }, [])
 
-  return <div ref={mountRef} style={{ width: '100vw', height: '100vh' }} />
+  return (
+    <div
+      ref={mountRef}
+      style={{ width: '100%', height: '300px' }}   // <── invece di 100vw/100vh
+    />
+  );
 }

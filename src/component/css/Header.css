@@ -1,0 +1,51 @@
+/* Imposta lo sfondo del Navbar come #111 e il testo in bianco */
+.custom-navbar {
+    background-color: #111 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .custom-navbar .navbar-brand,
+  .custom-navbar .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+  }
+  
+  /* Evidenzia il link attivo */
+  .custom-navbar .nav-link.active {
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Stile del pulsante toggle per dispositivi mobili */
+  .custom-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Centra i link in modalità desktop */
+  @media (min-width: 768px) {
+    .custom-navbar .mx-auto {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Allinea i link a sinistra in modalità mobile */
+  @media (max-width: 767.98px) {
+    .custom-navbar .ms-0 {
+      margin-left: 0 !important;
+      text-align: left;
+      padding-top: 1rem;
+    }
+  }
+
+  .open-menu-btn {
+    align-items: flex-end;
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  
