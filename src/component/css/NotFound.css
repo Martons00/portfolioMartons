@@ -1,0 +1,32 @@
+.notfound-hero {
+  position: relative;
+  height: 60vh;          /* quanto alto vuoi il blocco */
+  overflow: hidden;
+}
+
+/* il three.js riempie il background */
+.notfound-hero canvas,
+.notfound-hero > div:first-child {
+  position: absolute;
+  inset: 0;              /* top/right/bottom/left = 0 */
+  width: 100%;
+  height: 100%;
+}
+
+/* overlay centrato sopra */
+.notfound-overlay {
+  position: relative;    /* sopra al background */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+.notfound-overlay button {
+  margin-top: 1rem;
+  width: 40%;
+}

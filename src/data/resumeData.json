@@ -1,0 +1,177 @@
+{
+  "personalInfo": {
+    "name": "Raffaele Martone",
+    "title": "AI Engineer | Machine Learning Specialist",
+    "phone": "+39 320-418 830",
+    "email": "raffaelemartone34@gmail.com",
+    "linkedin": "linkedin.com/in/raffaele-martone00/",
+    "github": "github.com/Martons00"
+  },
+  "summary": "Computer Engineering graduate student specializing in Artificial Intelligence and Data Analytics with hands-on experience in developing neural networks, machine learning models, and computer vision applications. Combining technical expertise with creative problem-solving abilities honed through diverse experiences at the Apple Developer Academy and competitive hackathons. Seeking to leverage my expertise in AI/ML technologies to contribute to innovative solutions in a challenging AI Engineer role.",
+  "education": [
+    {
+      "institution": "Politecnico di Torino",
+      "degree": "MSc in Computer Engineering",
+      "specialization": "Artificial Intelligence and Data Analytics",
+      "startDate": "2023-09",
+      "endDate": "2026-03"
+    },
+    {
+      "institution": "Apple Developer Academy @Unina Federico II",
+      "degree": "Diploma",
+      "description": "The Apple Developer Academy is an intense and highly selective training program offered by Apple.",
+      "startDate": "2022-09",
+      "endDate": "2023-06"
+    },
+    {
+      "institution": "Università Federico II di Napoli",
+      "degree": "BSc in Computer Engineering",
+      "specialization": "Computer Engineering",
+      "startDate": "2019-09",
+      "endDate": "2023-03",
+      "awards": ["Winner of a Scholarship for Outstanding Candidates"]
+    }
+  ],
+  "experience": [
+    {
+      "position": "Intern (Research Laboratory)",
+      "company": "Inria - Université Cote D'Azur",
+      "startDate": "2025-09",
+      "endDate": "2026-02",
+      "description": "Research experience working under the direct supervision of Inria.",
+      "project": "Organoids Image Classification using Vision Transformers."
+    },
+    {
+      "position": "Undergraduate Research Opportunities Programme",
+      "company": "UROP@PoliTo",
+      "startDate": "2025-03",
+      "endDate": "2025-09",
+      "description": "Research experience working under the direct supervision of PoliTo.",
+      "project": "Trained Deep Learning Models for Keyword Spotting and optimization."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Student Tech Clash 2025",
+      "date": "2024-10",
+      "award": "Winner",
+      "description": "Winner Student Tech Clash - Reply x Politecnico di Torino. The Idea Generation Event for University Students about AI Agents is coming to University of Manchester, Politecnico di Torino, Centrale Supelec (DSVH), RWTH Aachen, Politecnico di Milano, Bocconi and Sapienza."
+    },
+    {
+      "title": "The Big Hack 2023",
+      "date": "2023-06",
+      "award": "Winner",
+      "description": "Winner of 'STMicroelectronics – OneStepAhead: Il tuo coach personale per il benessere!' Hackathon provided by Regione Campania, Maker Faire Rome - The European Edition con Sviluppo Campania, Università degli studi di Napoli 'Federico II' and Apple Developer Academy."
+    },
+    {
+      "title": "B-Future Challenge",
+      "date": "2024-11",
+      "award": "Top 3",
+      "description": "Hackathon provided by BOOM Knowledge Hub by CRIF, Regione Emilia-Romagna."
+    },
+    {
+      "title": "Italian Tech Week",
+      "location": "Torino, IT",
+      "date": "2024-09",
+      "role": "Volunteer, Backstage Assistant"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Semi-Supervised Learning for Mesothelioma Classification",
+      "link": "https://github.com/LucaIanniello/Semi-Supervised-Learning-for-Mesothelioma-Classification",
+      "description": "Implemented semi-supervised learning techniques for mesothelioma disease classification using medical imaging data. Addresses the challenge of limited labeled data in medical diagnosis through advanced machine learning methodologies",
+      "tools": ["Python", "PyTorch", "Semi-Supervised Learning", "Medical Image Analysis"]
+    },
+    {
+        "name": "Organoid Image Classification Using Deep Learning",
+        "link": "https://github.com/Martons00/Organoid-Image-Classification-Using-Deep-Learning",
+        "description": "A comprehensive deep learning framework for 3D medical image classification of organoids using state-of-the-art transformer and CNN architectures.",
+        "tools": ["Python", "Machine Learning", "Deep Learning", "Transformers", "PyTorch", "Medical Imaging"]
+    },
+    {
+      "name": "PolitoSbobinatore",
+      "link": "https://github.com/Martons00/PolitoSbobinatore",
+      "description": "An AI model chain designed to simplify note taking at university by automating transcription and organization processes",
+      "tools": ["Python", "Jupyter Notebook", "PyTorch", "Selenium Web-Scraper", "OpenAI-Whisper", "Hugging Face"]
+    },
+    {
+      "name": "Real-Time Domain Adaptation for Semantic Segmentation",
+      "link": "https://github.com/Martons00/Real-time-Domain-Adaptation-in-Semantic-Segmentation",
+      "description": "Investigated domain adaptation techniques for semantic segmentation using state-of-the-art models like DeepLabv3, PIDNet, and MSNet on the LostAndFound dataset. Explored methods such as data augmentation, adversarial learning, DACS, PEM, and CycleGAN to tackle domain shifts between urban and rural environments",
+      "tools": ["Python", "Jupyter Notebook", "PyTorch", "Google Colab"]
+    },
+    {
+      "name": "Model Depth Conversion for Autonomous Vehicles",
+      "link": "https://github.com/Martons00/modelDeth-MAN-TruckScenes",
+      "description": "Developed a model to convert depth heatmaps to depth values in meters for MAN TruckScenes dataset. Implements processing pipeline for autonomous vehicle perception systems",
+      "tools": ["Python", "PyTorch", "Computer Vision", "3D Data Processing"]
+    },
+    {
+      "name": "Nostos: Excursion Navigation Application",
+      "link": "https://github.com/Fettine-Panate/Nostos",
+      "description": "An application designed to help excursionists get back to their starting point when lost during hiking or outdoor sessions. Implements navigation algorithms to compute optimal return routes",
+      "tools": ["Python", "Location Services", "Algorithm Design"]
+    },
+    {
+      "name": "Context-Aware GUI Testing for Mobile Applications using LLMs",
+      "link": "https://github.com/Martons00/Context-Aware-GUI-Testing-for-Mobile-Applications-using-LLMs",
+      "description": "Developed a framework leveraging Large Language Models for intelligent GUI testing of mobile applications. Utilizes context awareness to improve test case generation and automated testing of user interfaces",
+      "tools": ["Python", "LLMs", "Mobile Testing", "Natural Language Processing"]
+    }
+  ],
+  "technicalSkills": {
+    "programmingLanguages": ["Python", "C", "C++", "Javascript", "Java", "Swift", "Rust"],
+    "frameworksAndTechnologies": [
+      "React", "Apache Hadoop", "Numpy", "Torch", "Selenium", "FreeRTOS", 
+      "Linux", "Raspberry", "Arduino", "STM32", "Hugging Face", "Transformers", 
+      "Figma", "Jupyter Notebook", "MathLab", "Git", "GitHub", "Matplotlib", 
+      "Android Studio", "Espresso (Android Testing)", "Jest", "Oracle", "MySQL", 
+      "Node.js", "HTML CSS", "TypeScript", "ML Libraries", "Word"
+    ]
+  },
+  "languageSkills": [
+    {
+      "exam": "IELTS",
+      "level": "B2 (Upper Intermediate)",
+      "score": "6.5",
+      "year": 2023
+    }
+  ],
+  "softSkills": [
+    {
+      "skill": "Leadership",
+      "description": "Strong capabilities in diverse, international teams"
+    },
+    {
+      "skill": "Communication",
+      "description": "Bridges cultural and technical differences effectively"
+    },
+    {
+      "skill": "Problem-Solving",
+      "description": "Creative solutions under pressure and tight deadlines"
+    },
+    {
+      "skill": "Adaptability",
+      "description": "Resilient in dynamic environments, continuous learner"
+    }
+  ],
+  "hobbies": [
+    {
+      "category": "Dance & Performing Arts",
+      "description": "Professional experience as a ballet dancer and entertainer. Trained in various dance styles with performances at cultural events and competitions."
+    },
+    {
+      "category": "Motorsports",
+      "description": "Passionate Formula 1 and motorsport enthusiast with deep knowledge of racing technologies and strategies."
+    },
+    {
+      "category": "Entertainment",
+      "description": "Background as an event animator and professional fire performer, demonstrating creativity and ability to perform under pressure."
+    },
+    {
+      "category": "Other Interests",
+      "description": "Cooking Italian cuisine, crochet crafting, football, and tennis. These activities have developed my patience, precision, and teamwork abilities."
+    }
+  ]
+}

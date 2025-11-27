@@ -14,6 +14,9 @@ import Footer from './component/Footer'
 // import Project from './component/Project';
 // import JournalItem from './component/JournalItem';
 
+// importi solo quelli che ti servono nelle determinate view
+import { personalInfo, summary, education, experience, achievements, projects, technicalSkills, languageSkills, softSkills, hobbies } from './data/resumeData.json';
+
 function App() {
   const [count, setCount] = useState(0)
   const footerText = "Raffaele Martone - Portfolio";
