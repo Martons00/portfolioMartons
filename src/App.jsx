@@ -7,7 +7,7 @@ import NotFound from './component/NotFound'
 import './App.css'
 import Header from './component/Header'
 import Footer from './component/Footer'
-// import Work from './component/Work';
+import Projects from './component/Projects';
 // import About from './component/About';
 // import Journal from './component/Journal';
 // import Contact from './component/Contact';
@@ -33,11 +33,12 @@ function App() {
                 <Homepage />
               }>
             </Route>
-            {/* <Route
+             <Route
               path="/portfolioMartons/work" element={
-                <Work />
+                <Projects />
               }>
             </Route>
+            {/*
             <Route
               path="/portfolioMartons/work/:id" element={<Project/>
               }>
