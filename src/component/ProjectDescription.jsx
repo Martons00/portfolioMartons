@@ -11,7 +11,7 @@ const ProjectDescription = ({ currentIndex }) => {
         return (
             <div className="project-placeholder">
                 <video
-                    src="/portfolioMartons/src/assets/placeholderProjects.mp4"
+                    src="../assets/placeholderProjects.mp4"
                     autoPlay
                     loop
                     muted
