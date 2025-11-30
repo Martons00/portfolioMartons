@@ -43,7 +43,7 @@
 .project-description__tools h3 {
     font-size: 12px;
     text-transform: uppercase;
-    color: #00ff88;
+    color: #820101;
     margin: 0 0 8px 0;
 }
 
@@ -59,17 +59,17 @@
 .project-description__tools li {
     padding: 4px 12px;
     background: rgba(0, 255, 136, 0.1);
-    border: 1px solid #00ff88;
+    border: 1px solid #820101;
     border-radius: 999px;
     font-size: 12px;
-    color: #00ff88;
+    color: #820101;
 }
 
 .project-description__link {
     margin-top: auto;      /* spinge il link in basso */
     display: inline-block;
     padding: 8px 16px;
-    background: #00ff88;
+    background: #820101;
     color: #000;
     text-decoration: none;
     border-radius: 6px;
@@ -78,8 +78,9 @@
 }
 
 .project-description__link:hover {
-    background: #00dd77;
+    background: #FFFFFF;
     transform: translateX(2px);
+    color: #000;
 }
 
 .project-description__video {

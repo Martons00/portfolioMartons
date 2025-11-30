@@ -84,24 +84,34 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
     container.appendChild(renderer.domElement)
 
     // luce ambiente morbida, leggermente fredda
-    scene.add(new THREE.AmbientLight(0xbfc7d5, 0.65))
+    scene.add(new THREE.AmbientLight(0xffffff, 5))
 
     // fill dall’alto, neutra
-    const hemi = new THREE.HemisphereLight(0xdde4ff, 0x0b0b0e, 0.6)
+    const hemi = new THREE.HemisphereLight(0xdde4ff, 0x0b0b0e, 6)
     scene.add(hemi)
 
     // key light laterale calda
-    const keyLight = new THREE.DirectionalLight(0x00ff9f, 2)
+    const keyLight = new THREE.DirectionalLight(0x820101, 2)
     keyLight.position.set(0, 3, -1)
     keyLight.castShadow = true
     keyLight.shadow.mapSize.set(1024, 1024)
     keyLight.shadow.bias = -0.0005
     scene.add(keyLight)
 
-    // rim light fredda dietro per staccare i bordi
-    const rimLight = new THREE.DirectionalLight(0x88c5ff, 1)
-    rimLight.position.set(0, 2, 0)
-    scene.add(rimLight)
+    // spot tipo cono di luce dall'alto
+    const spotLight = new THREE.SpotLight(0xffffff, 10, 5, Math.PI / 8, 0.3, 1)
+    // colore, intensità, distanza, angolo, penumbra, decay
+
+    spotLight.position.set(0, 3, -1)      // punto da cui parte il cono
+    spotLight.target.position.set(0, 0, 0) // dove punta il cono (centro scena)
+    scene.add(spotLight)
+    scene.add(spotLight.target)
+
+    // ombre (opzionale)
+    spotLight.castShadow = true
+    spotLight.shadow.mapSize.set(1024, 1024)
+    spotLight.shadow.bias = -0.0005
+
 
 
     const controls = new OrbitControls(camera, renderer.domElement)
@@ -221,7 +231,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
 
         // materiale condiviso
         const floorMaterial = new THREE.MeshStandardMaterial({
-          color: 0x470000,
+          color: 0x181818,
           roughness: 0.65,
           metalness: 0.3,
           side: THREE.DoubleSide

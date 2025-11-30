@@ -27,7 +27,6 @@ const ProjectDescription = ({ currentIndex }) => {
         <div className="project-description">
             <h2>{project.name}</h2>
             <p className="project-description__text">{project.description}</p>
-
             {project.link && (
                 <div className="program-icon-item project-description__link">
                     <span className="icon">{<FaGithub />}</span>

@@ -12,10 +12,10 @@ const Projects = () => {
     return (
         <div className="homepage">
             <Row>
-                <Col lg={8} >
+                <Col lg={8} className="d-flex justify-content-center project-fade-in">
                     <MonitorsScene currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
                 </Col>
-                <Col lg={4} className="d-flex align-items-center">
+                <Col lg={4} className="d-flex align-items-center project-fade-in">
                     <ProjectDescription currentIndex={currentIndex} />
                 </Col>
             </Row>

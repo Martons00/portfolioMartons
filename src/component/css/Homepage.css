@@ -1,4 +1,40 @@
 .homepage {
     width: 100%;
     min-height: 100%;
+    padding: 24px 0;
+}
+
+.project-card {
+    padding: 16px;
+    border-radius: 12px;
+    background: rgba(15, 15, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-section {
+    min-height: 600px;
+    position: relative;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.project-fade-in {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: projectFadeIn 5s ease-out forwards;
+}
+
+@keyframes projectFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

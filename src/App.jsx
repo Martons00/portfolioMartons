@@ -8,6 +8,10 @@ import './App.css'
 import Header from './component/Header'
 import Footer from './component/Footer'
 import Projects from './component/Projects';
+import './component/css/ProjectDescription.css';
+import { useEffect } from 'react';
+import {DecryptedText} from './component/CustomText';
+
 // import About from './component/About';
 // import Journal from './component/Journal';
 // import Contact from './component/Contact';
@@ -20,6 +24,39 @@ import { personalInfo, summary, education, experience, achievements, projects, t
 function App() {
   const [count, setCount] = useState(0)
   const footerText = "Raffaele Martone - Portfolio";
+  const [showSplash, setShowSplash] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSplash(false), 2000) // 2s
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (showSplash) {
+    return (
+      <div className="splash-screen">
+        <div className="splash-logo">
+          <DecryptedText
+            text="Raffaele Martone"
+            speed={80}
+            maxIterations={20}
+            revealDirection="start"
+            sequential={true}
+            animateOn="view"
+            className='splash-logo'
+          />
+        </div>
+        <DecryptedText
+          text="Loading Portfolio..."
+          speed={80}
+          maxIterations={20}
+          revealDirection="start"
+          sequential={true}
+          animateOn="view"
+          className='splash-text'
+        />
+      </div>
+    )
+  }
 
 
   return (
@@ -33,7 +70,7 @@ function App() {
                 <Homepage />
               }>
             </Route>
-             <Route
+            <Route
               path="/portfolioMartons/work" element={
                 <Projects />
               }>
@@ -58,8 +95,8 @@ function App() {
                 <Contact />
               }>
             </Route> */}
-            <Route path="/portfolioMartons/*" element={<NotFound />}> </Route> 
-          </Routes> 
+            <Route path="/portfolioMartons/*" element={<NotFound />}> </Route>
+          </Routes>
         </main>
         <Footer />
       </div>
