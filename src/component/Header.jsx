@@ -55,7 +55,7 @@ function Header(props) {
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Work
+              Projects
             </Nav.Link>
             <Nav.Link 
               as={NavLink} 
@@ -67,11 +67,11 @@ function Header(props) {
             </Nav.Link>
             <Nav.Link 
               as={NavLink} 
-              to="/portfolioMartons/journal" 
+              to="/portfolioMartons/experiences" 
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              Journal
+              Experiences
             </Nav.Link>
             <Nav.Link 
               as={NavLink} 

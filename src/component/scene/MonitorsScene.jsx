@@ -3,10 +3,10 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
-export default function MonitorsScene() {
+export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
   const mountRef = useRef(null)
 
-  const [currentIndex, setCurrentIndex] = useState(null) // null = base
+
 
   // const posBall = [0, 0, 0]
 
@@ -48,7 +48,7 @@ export default function MonitorsScene() {
       poscam: [0.5, 0.2, 0.7],
       lookat: [0.4, 0.2, 0.1]
     },
-  7: {
+    7: {
       poscircle: [- 0.73, 0.2, 0],
       poscam: [- 0.7, 0.2, 0.6],
       lookat: [- 0.6, 0.2, 0]
@@ -91,16 +91,16 @@ export default function MonitorsScene() {
     scene.add(hemi)
 
     // key light laterale calda
-    const keyLight = new THREE.DirectionalLight(0x9F2B68, 2)
-    keyLight.position.set(-0.8, 3, -5)
+    const keyLight = new THREE.DirectionalLight(0x00ff9f, 2)
+    keyLight.position.set(0, 3, -1)
     keyLight.castShadow = true
     keyLight.shadow.mapSize.set(1024, 1024)
     keyLight.shadow.bias = -0.0005
     scene.add(keyLight)
 
     // rim light fredda dietro per staccare i bordi
-    const rimLight = new THREE.DirectionalLight(0x88c5ff, 6)
-    rimLight.position.set(-3, 0, -0.5)
+    const rimLight = new THREE.DirectionalLight(0x88c5ff, 1)
+    rimLight.position.set(0, 2, 0)
     scene.add(rimLight)
 
 
@@ -179,7 +179,7 @@ export default function MonitorsScene() {
       hotspots.push(sprite)
     }
 
-    
+
 
     function onClick(event) {
       const rect = renderer.domElement.getBoundingClientRect()
@@ -216,19 +216,51 @@ export default function MonitorsScene() {
         console.log('Model size:', box.getSize(new THREE.Vector3()))
         model.castShadow = true
         scene.add(model)
+        // ======= STANZA SEMPLIFICATA =======
+        const dim_floor = 4
 
-        const floorGeometry = new THREE.PlaneGeometry(20, 20)
+        // materiale condiviso
         const floorMaterial = new THREE.MeshStandardMaterial({
-          color: 0x1b1b1e,
-          roughness: 0.65,   // opaco ma non gessoso
-          metalness: 0.3     // un filo di riflessione
+          color: 0x470000,
+          roughness: 0.65,
+          metalness: 0.3,
+          side: THREE.DoubleSide
         })
 
+        // gruppo stanza
+        const room = new THREE.Group()
+        scene.add(room)
+
+        // ========== FLOOR ==========
+        const floorGeometry = new THREE.PlaneGeometry(dim_floor, dim_floor)
         const floor = new THREE.Mesh(floorGeometry, floorMaterial)
-        floor.rotation.x = -Math.PI / 2
+        floor.rotation.x = -Math.PI / 2   // sdraiato
         floor.position.y = 0
         floor.receiveShadow = true
-        scene.add(floor)
+        room.add(floor)
+
+        // ========== MURI LATERALI ==========
+        const wallLeft = new THREE.Mesh(floorGeometry, floorMaterial)
+        // bordo sinistro del “cubo”
+        wallLeft.position.set(0, dim_floor / 2, - dim_floor / 2)
+        wallLeft.receiveShadow = true
+        room.add(wallLeft)
+
+        const wallRight = new THREE.Mesh(floorGeometry, floorMaterial)
+        // bordo destro del “cubo”
+        wallRight.position.set(dim_floor / 2, dim_floor / 2, 0)
+        wallRight.rotation.y = -Math.PI / 2
+        wallRight.receiveShadow = true
+        room.add(wallRight)
+
+
+
+        // ========== ROTAZIONE A 45° DI TUTTA LA STANZA ==========
+        room.rotation.y = Math.PI / 4    // ora tutto il “cubo” è ruotato di 45°
+        room.position.y = box.min.y  // rialza stanza se necessario
+
+
+
 
         Object.entries(posMonitor).forEach(([key, data]) => {
           createHotspot(key, data)
@@ -250,10 +282,11 @@ export default function MonitorsScene() {
       renderer.setSize(container.clientWidth, container.clientHeight)
     }
     window.addEventListener('resize', onResize)
-    
+
     const animate = () => {
       requestAnimationFrame(animate)
       const delta = clock.getDelta()
+      const elapsedTime = clock.getElapsedTime()
       if (mixer) mixer.update(delta)
 
       if (camAnimating) {
@@ -265,7 +298,6 @@ export default function MonitorsScene() {
         controls.target.copy(target)
         if (t >= 1) camAnimating = false
       }
-
 
       controls.update()
       renderer.render(scene, camera)

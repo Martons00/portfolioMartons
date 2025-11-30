@@ -1,0 +1,63 @@
+.program-icons-container {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 24px;
+    width: fit-content;
+    background: #222;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.04);
+    color: #fff;
+    width: 80%;
+}
+
+.program-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    width: fit-content;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+.program-description {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    width: fit-content;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    text-align: start;
+    justify-content: center;
+}
+
+.program-icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 24px;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.program-icon-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    color: #f7f7f7;
+    background: #222;
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.03);
+    border: 1px solid #fff; /* AGGIUNGI QUESTA RIGA */
+}
+
+
+.program-icon-item .icon {
+    font-size: 1.5em;
+    color: #f7f7f7;
+}

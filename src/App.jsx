@@ -49,13 +49,8 @@ function App() {
               }>
             </Route>
             <Route
-              path="/portfolioMartons/journal" element={
-                <Journal />
-              }>
-            </Route>
-            <Route
-              path="/portfolioMartons/journal/:id" element={
-                <JournalItem />
+              path="/portfolioMartons/experiences" element={
+                <Experiences />
               }>
             </Route>
             <Route
