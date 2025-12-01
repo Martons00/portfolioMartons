@@ -31,3 +31,13 @@ body, html {
   flex: 1;
   margin-top: 10px;
 }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 0.9; transform: translate(-50%, 0); }
+}

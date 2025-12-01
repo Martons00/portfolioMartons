@@ -78,12 +78,6 @@
   ],
   "projects": [
     {
-      "name": "Semi-Supervised Learning for Mesothelioma Classification",
-      "link": "https://github.com/LucaIanniello/Semi-Supervised-Learning-for-Mesothelioma-Classification",
-      "description": "Implemented semi-supervised learning techniques for mesothelioma disease classification using medical imaging data. Addresses the challenge of limited labeled data in medical diagnosis through advanced machine learning methodologies",
-      "tools": ["Python", "PyTorch", "Semi-Supervised Learning", "Medical Image Analysis"]
-    },
-    {
         "name": "Organoid Image Classification Using Deep Learning",
         "link": "https://github.com/Martons00/Organoid-Image-Classification-Using-Deep-Learning",
         "description": "A comprehensive deep learning framework for 3D medical image classification of organoids using state-of-the-art transformer and CNN architectures.",
@@ -111,13 +105,25 @@
       "name": "Nostos: Excursion Navigation Application",
       "link": "https://github.com/Fettine-Panate/Nostos",
       "description": "An application designed to help excursionists get back to their starting point when lost during hiking or outdoor sessions. Implements navigation algorithms to compute optimal return routes",
-      "tools": ["Python", "Location Services", "Algorithm Design"]
+      "tools": ["Swift","iOS", "Location Services", "Algorithm Design"]
     },
     {
       "name": "Context-Aware GUI Testing for Mobile Applications using LLMs",
       "link": "https://github.com/Martons00/Context-Aware-GUI-Testing-for-Mobile-Applications-using-LLMs",
       "description": "Developed a framework leveraging Large Language Models for intelligent GUI testing of mobile applications. Utilizes context awareness to improve test case generation and automated testing of user interfaces",
       "tools": ["Python", "LLMs", "Mobile Testing", "Natural Language Processing"]
+    },
+    {
+      "name": "Junky Storm",
+      "link": "https://github.com/UBG-Inc/Junky-Storm",
+      "description": "This is an Arcade Game created by the UBG team. Starting with Gubby that wants to give back to humans all the food that aliens stoled from the Earth, but unfortunately he doesn't like bananas.. and aliens know it.",
+      "tools": ["Swift", "iOS", "Game Development", "SpriteKit"]
+    },
+       {
+      "name": "Semi-Supervised Learning for Mesothelioma Classification",
+      "link": "https://github.com/LucaIanniello/Semi-Supervised-Learning-for-Mesothelioma-Classification",
+      "description": "Implemented semi-supervised learning techniques for mesothelioma disease classification using medical imaging data. Addresses the challenge of limited labeled data in medical diagnosis through advanced machine learning methodologies",
+      "tools": ["Python", "PyTorch", "Semi-Supervised Learning", "Medical Image Analysis"]
     }
   ],
   "technicalSkills": {

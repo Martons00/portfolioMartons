@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { projects } from '../../data/resumeData.json'
 
 export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
   const mountRef = useRef(null)
@@ -15,43 +16,48 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
     lookat: [0, 0.5, 0]
   }
 
-  const projectsTitles = ["Project A", "Project B", "Project C", "Project D", "Project E", "Project F", "Project G"]
+  const projectsTitles = projects.map(project => project.name)
 
   const posMonitor = {
-    1: {
+    0: {
       poscircle: [0.4, 1.15, 0.3],
-      poscam: [0.2, 1.05, 0.5],
+      poscam: [0.2, 1.05, 0.7],
       lookat: [0.2, 1.05, 0]
     },
-    2: {
+    1: {
       poscircle: [0.6, 0.80, 0.3],
-      poscam: [0, 0.70, 0.6],
+      poscam: [0, 0.70, 0.8],
       lookat: [0.25, 0.80, 0.1]
     },
-    3: {
+    2: {
       poscircle: [- 0.45, 0.90, -0.1],
-      poscam: [- 0.35, 0.80, 0.5],
+      poscam: [- 0.35, 0.80, 0.6],
       lookat: [- 0.2, 0.80, 0]
     },
-    4: {
+    3: {
       poscircle: [0.65, 0.45, 0.3],
-      poscam: [0.5, 0.45, 0.6],
+      poscam: [0.5, 0.45, 0.8],
       lookat: [0.4, 0.45, 0.1]
     },
-    5: {
+    4: {
       poscircle: [- 0.78, 0.45, 0],
       poscam: [- 0.8, 0.45, 0.6],
-      lookat: [- 0.6, 0.45, 0]
+      lookat: [- 0.4, 0.45, 0]
     },
-    6: {
+    5: {
       poscircle: [0.75, 0.2, 0.3],
-      poscam: [0.5, 0.2, 0.7],
+      poscam: [0.5, 0.2, 0.8],
       lookat: [0.4, 0.2, 0.1]
     },
-    7: {
+    6: {
       poscircle: [- 0.73, 0.2, 0],
-      poscam: [- 0.7, 0.2, 0.6],
-      lookat: [- 0.6, 0.2, 0]
+      poscam: [- 0.7, 0.2, 0.7],
+      lookat: [- 0.35, 0.2, 0]
+    },
+    7: {
+      poscircle: [0.1, 0.1, 0.4],
+      poscam: [- 0.2, 0.2, 0.7],
+      lookat: [0.1, 0.2, 0]
     }
   }
 
@@ -177,7 +183,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
       ctx.font = `${size * 0.4}px sans-serif`
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
-      ctx.fillText(label, size / 2, size / 2)
+      ctx.fillText(parseInt(label)+1, size / 2, size / 2)
 
       const texture = new THREE.CanvasTexture(canvas)
       const material = new THREE.SpriteMaterial({ map: texture, transparent: true })
@@ -376,7 +382,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
           alignItems: 'center',
           gap: 8,
           padding: '4px 8px',
-          borderRadius: 999,
+          borderRadius: 20,
           background: 'rgba(0,0,0,0.6)',
           color: '#fff',
           fontSize: 12
@@ -385,7 +391,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
         <button onClick={goPrev} style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer' }}>
           ‹
         </button>
-        <span>{currentIndex ? `${projectsTitles[currentIndex - 1]}` : 'Base'}</span>
+        <span>{currentIndex ? `${projectsTitles[currentIndex]}` : 'Base'}</span>
         <button onClick={goNext} style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer' }}>
           ›
         </button>
