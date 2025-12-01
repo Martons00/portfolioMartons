@@ -1,13 +1,13 @@
 {
   "personalInfo": {
     "name": "Raffaele Martone",
-    "title": "AI Engineer | Machine Learning Specialist",
+    "titles": ["AI Engineer", "Machine Learning Specialist","Mobile Developer", "Computer Vision Enthusiast", "Data Scientist", "Software Developer"],
     "phone": "+39 320-418 830",
     "email": "raffaelemartone34@gmail.com",
     "linkedin": "linkedin.com/in/raffaele-martone00/",
     "github": "github.com/Martons00"
   },
-  "summary": "Computer Engineering graduate student specializing in Artificial Intelligence and Data Analytics with hands-on experience in developing neural networks, machine learning models, and computer vision applications. Combining technical expertise with creative problem-solving abilities honed through diverse experiences at the Apple Developer Academy and competitive hackathons. Seeking to leverage my expertise in AI/ML technologies to contribute to innovative solutions in a challenging AI Engineer role.",
+  "summary": "Computer Engineering graduate student specializing in Artificial Intelligence and Data Analytics with hands-on experience in developing neural networks, machine learning models, and computer vision applications.",
   "education": [
     {
       "institution": "Politecnico di Torino",

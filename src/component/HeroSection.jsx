@@ -6,12 +6,13 @@ import { Row, Col } from 'react-bootstrap'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom' // se ti serve in futuro
 import './css/Homepage.css'
+import { TextType } from './CustomText'
 
 import ScrollDownHint from './ScrollDown'
 
 export default function HeroSection({ personalInfo, summary }) {
     return (
-        <div style={{ width: '100%', minHeight: '600px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ width: '100%', minHeight: '60vh', position: 'relative', overflow: 'hidden' }}>
             {/* BACKGROUND PixelBlast */}
             <div style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
                 <PixelBlast
@@ -27,51 +28,77 @@ export default function HeroSection({ personalInfo, summary }) {
                     position: 'relative',
                     zIndex: 2,
                     width: '100%',
-                    height: '100%',
+                    minHeight: '60vh',
                     display: 'flex',
-                    alignItems: 'center',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
                     padding: '2rem',
                     color: 'white',
                 }}
             >
-                <div className="align-items-center hero-section" style={{ width: '100%' }}>
-                    <Row>
+                {/* WRAPPER GRANDE: titolo+typing + paragrafo equidistante */}
+                <div
+                    style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        minHeight: '40vh',
+                        justifyContent: 'space-between',  // 👈 AGGIUNTA CRUCIALE
+                    }}
+                >
+                    {/* titolo + typing in alto */}
+                    <div>
                         <h1 className="mb-1">{personalInfo.name}</h1>
-                        <h3 className="mb-3">{personalInfo.title}</h3>
-                        <p className="lead">{summary}</p>
-                    </Row>
-                    <Row className="mt-3">
-                        <Col>
-                            <div className="program-icon-item project-description__link">
-                                <span className="icon"><FaGithub /></span>
-                                <a
-                                    href={`https://${personalInfo.github}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="label"
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    GitHub Profile
-                                </a>
-                            </div>
-                        </Col>
-                        <Col>
-                            <div className="program-icon-item project-description__link">
-                                <span className="icon"><FaLinkedin /></span>
-                                <a
-                                    href={`https://${personalInfo.linkedin}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="label"
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    LinkedIn Profile
-                                </a>
-                            </div>
-                        </Col>
-                    </Row>
+                        <TextType
+                            text={personalInfo.titles}
+                            typingSpeed={75}
+                            pauseDuration={1500}
+                            showCursor={true}
+                            cursorCharacter="_"
+                            className="mb-2"
+                        />
+                    </div>
+                    {/* paragrafo al centro */}
+                    <div style={{margin: 'auto'}}>
+                        <p className="lead" >
+                            {summary}
+                        </p>
+                    </div>
                 </div>
+
+                {/* blocco link in fondo */}
+                <Row className="mt-3">
+                    <Col>
+                        <div className="program-icon-item project-description__link">
+                            <span className="icon"><FaGithub /></span>
+                            <a
+                                href={`https://${personalInfo.github}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="label"
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                GitHub Profile
+                            </a>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="program-icon-item project-description__link">
+                            <span className="icon"><FaLinkedin /></span>
+                            <a
+                                href={`https://${personalInfo.linkedin}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="label"
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                LinkedIn Profile
+                            </a>
+                        </div>
+                    </Col>
+                </Row>
             </div>
+
+
         </div>
     )
 }
