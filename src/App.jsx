@@ -11,12 +11,8 @@ import Projects from './component/Projects';
 import './component/css/ProjectDescription.css';
 import { useEffect } from 'react';
 import {DecryptedText} from './component/CustomText';
-
-// import About from './component/About';
-// import Journal from './component/Journal';
-// import Contact from './component/Contact';
-// import Project from './component/Project';
-// import JournalItem from './component/JournalItem';
+import Experiences from './component/Experiences';
+import About from './component/About';
 
 // importi solo quelli che ti servono nelle determinate view
 import { personalInfo, summary, education, experience, achievements, projects, technicalSkills, languageSkills, softSkills, hobbies } from './data/resumeData.json';
@@ -75,26 +71,19 @@ function App() {
                 <Projects />
               }>
             </Route>
-            {/*
-            <Route
-              path="/portfolioMartons/work/:id" element={<Project/>
-              }>
-            </Route>
-            <Route
-              path="/portfolioMartons/about" element={
-                <About />
-              }>
-            </Route>
             <Route
               path="/portfolioMartons/experiences" element={
                 <Experiences />
               }>
             </Route>
+            
             <Route
-              path="/portfolioMartons/contact" element={
-                <Contact />
+              path="/portfolioMartons/about" element={
+                <About />
+
               }>
-            </Route> */}
+            </Route>
+           
             <Route path="/portfolioMartons/*" element={<NotFound />}> </Route>
           </Routes>
         </main>

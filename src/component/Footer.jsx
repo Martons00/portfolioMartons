@@ -17,22 +17,17 @@ function Footer() {
             <ul>
               <li>
                 <NavLink to="/portfolioMartons/work">
-                  Work
+                  Projects
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/portfolioMartons/experiences">
+                  Experiences
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/portfolioMartons/about">
                   About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/portfolioMartons/journal">
-                  Journal
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/portfolioMartons/contact">
-                  Contact
                 </NavLink>
               </li>
             </ul>

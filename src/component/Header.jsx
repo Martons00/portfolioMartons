@@ -81,14 +81,6 @@ function Header(props) {
             >
               About Me
             </Nav.Link>
-            <Nav.Link
-              as={NavLink}
-              to="/portfolioMartons/contact"
-              onClick={closeMenu}
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              Contact
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
