@@ -29,8 +29,6 @@
 }
 
 .project-description__text {
-    margin-top: auto;
-    margin-bottom: auto;
     line-height: 1.6;
     color: #ccc;
     font-size: 14px;
