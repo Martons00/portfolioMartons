@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
 import { FaGithub } from 'react-icons/fa'
 import MonitorsScenePreview from './scene/MonitorsScenePreview'
+import './css/ProjectDescription.css'
+import './css/Tools.css';
 
 export default function ProjectsSection() {
   return (
@@ -41,13 +43,16 @@ export default function ProjectsSection() {
         </Row>
 
         {/* CTA per pagina portfolio/work */}
-        <div className="mt-4">
-          <NavLink
-            to="/portfolioMartons/work"
-            className="btn btn-outline-light"
-          >
-            View all projects
-          </NavLink>
+        <div className="mt-4" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="program-icon-item project-description__link" style={{width: 'fit-content', alignItems: 'center'}}>
+            <NavLink
+              to="/portfolioMartons/work"
+              className="label"
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              View all projects
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
