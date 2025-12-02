@@ -338,17 +338,6 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
       controls.dispose();
       renderer.dispose();
 
-      // libera geometrie/materiali
-      scene.traverse(obj => {
-        if (obj.geometry) obj.geometry.dispose();
-        if (obj.material) {
-          if (Array.isArray(obj.material)) {
-            obj.material.forEach(m => m.dispose && m.dispose());
-          } else {
-            obj.material.dispose && obj.material.dispose();
-          }
-        }
-      });
 
       container.removeChild(renderer.domElement);
       delete window.jumpToView;
