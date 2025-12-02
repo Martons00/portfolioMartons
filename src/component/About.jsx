@@ -28,14 +28,14 @@ const renderWithBold = (text) => {
 const About = () => {
     // Array di immagini - aggiorna con i tuoi percorsi
     const images = [
-        '/portfolioMartons/img/Me.jpg',
-        '/portfolioMartons/img/Napoli_00.jpg',
-        '/portfolioMartons/img/Ballet_00.jpg',
-        '/portfolioMartons/img/Ballet_01.jpg',
-        '/portfolioMartons/img/Ballet_02.jpg',
-        '/portfolioMartons/img/Ballet_03.jpg',
-        '/portfolioMartons/img/Fire_00.jpg',
-        '/portfolioMartons/img/Fire_01.jpg',
+        '/portfolioMartons/img/Me.webp',
+        '/portfolioMartons/img/Napoli_00.webp',
+        '/portfolioMartons/img/Ballet_00.webp',
+        '/portfolioMartons/img/Ballet_01.webp',
+        '/portfolioMartons/img/Ballet_02.webp',
+        '/portfolioMartons/img/Ballet_03.webp',
+        '/portfolioMartons/img/Fire_00.webp',
+        '/portfolioMartons/img/Fire_01.webp',
     ];
     const sizes = [
         5, 6, 7, 8, 6, 5, 7, 8
