@@ -1,0 +1,54 @@
+{
+    "title": "About Me",
+    "sections": [
+        {
+            "heading": "Origins & Identity",
+            "paragraphs": [
+                "I come from **Arienzo**, a small town in **Campania**, but I've always felt a deeper connection to **Naples**. During my university years and time at **Apple Academy**, I lived in the city and became so attached to its spirit—the resilience, history, and authentic character—that I decided to immortalize it with a **Vesuvio tattoo**. My time living in **Turin** and now based in **Nice** has only deepened my appreciation for Naples and what it represents: a place where struggles breed **creativity** and where nothing is ever taken for granted. I'm not Neapolitan by birth, but I am **by choice**."
+            ]
+        },
+        {
+            "heading": "Who I Am",
+            "paragraphs": [
+                "At **25**, I'd describe myself as paradoxically **social yet solitary**. I thrive on challenging myself, though I'm my own harshest critic—I simply cannot leave things unfinished. I carry a **dual nature**: the **analytical mind** of an engineer paired with the **creative spirit** of a dancer and performer. This duality isn't a contradiction for me; it's the core of how I approach **problem-solving** and creation. The tension between these two sides pushes me to think differently and build better.",
+                "Living away from home first in Turin, then abroad in Nice, has been **transformative**. It's forced me to confront who I am outside my comfort zone, accelerating my **self-discovery** and pushing me to become more **independent** and intentional about my choices."
+            ]
+        },
+        {
+            "heading": "Why AI",
+            "paragraphs": [
+                "I chose **AI** because it represents a **frontier of possibility**. It's an ascending technology that captivated me immediately, and I genuinely believe it will **reshape how people live and work** in the years ahead. More than that, I'm fascinated by the **versatility** and **untapped potential**—the ability to tackle problems once deemed impossible for machines, finding new applications and solving challenges we haven't even imagined yet. Every day, AI redefines what's possible, and I want to be part of that **redefinition**."
+            ]
+        },
+        {
+            "heading": "Technical Foundation",
+            "paragraphs": [
+                "My toolkit includes **Python** and the entire ecosystem of **AI libraries**, **React** (which I use frequently for portfolios and websites), and increasingly **3D design** through **Blender** and **Three.js**. I'm drawn to technologies that let me bridge the gap between **engineering rigor** and **creative expression**. I'm not interested in becoming a specialist in one narrow domain; I want to maintain **flexibility** and continue experimenting across different domains."
+            ]
+        },
+        {
+            "heading": "Career Vision",
+            "paragraphs": [
+                "I'm looking to join a company where I can continuously **push boundaries**—a place that encourages **experimentation** with **emerging technologies** rather than settling into repetition. I want to keep **learning**, **iterating**, and avoiding the trap of doing the same thing year after year. Consulting taught me what I don't want; now I'm searching for an environment where **growth** and **innovation** are the core rhythm, not the exception."
+            ]
+        },
+        {
+            "heading": "The Dancer Within",
+            "paragraphs": [
+                "For **15 years**, I dedicated myself to **dance**, achieving my **diploma** and becoming an **instructor**. I performed in numerous shows and competitions, and even worked professionally as a **performer** and **entertainer**—roles that gave me **confidence**, **discipline**, and a different way of understanding communication. This isn't just a hobby; it's a **foundational part** of who I am. Dance taught me **rhythm**, **resilience**, and how to translate **emotion into movement**—skills that surprisingly translate well into problem-solving and creative thinking in tech."
+            ]
+        },
+        {
+            "heading": "Beyond Work",
+            "paragraphs": [
+                "I'm deeply invested in **anime**—**Hunter x Hunter** is my favorite, and I could spend hours recommending titles. I follow **Formula 1** with passion (though the **Ferrari** years have been nothing short of painful). I spend considerable time watching **football** and listening to football podcasts, general news deep-dives, and **true crime** narratives. I game when I can, though I'll admit I'm not the most skilled player. These aren't distractions; they're how I **decompress** and stay curious about storytelling, strategy, and culture."
+            ]
+        },
+        {
+            "heading": "My Rhythm",
+            "paragraphs": [
+                "My typical day runs **9–17** focused on work, **18–20** at the **gym**, and my evenings dedicated to whatever fascinates me that day—whether that's anime, football, reading, or **side projects**. I believe in **structure with intention**, not rigidity."
+            ]
+        }
+    ]
+}

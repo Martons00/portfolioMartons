@@ -10,6 +10,22 @@ import { TextType } from './CustomText'
 
 import ScrollDownHint from './ScrollDown'
 
+const renderWithBold = (text) => {
+    if (!text) return null;
+
+    const parts = String(text).split('**');
+    return (
+        <span>
+            {parts.map((part, idx) =>
+                idx % 2 === 1
+                    ? <strong key={`bold-${idx}`}>{part}</strong>
+                    : part
+            )}
+        </span>
+    );
+};
+
+
 export default function HeroSection({ personalInfo, summary }) {
     return (
         <div style={{ width: '100%', minHeight: '60vh', position: 'relative', overflow: 'hidden' }}>
@@ -58,9 +74,9 @@ export default function HeroSection({ personalInfo, summary }) {
                         />
                     </div>
                     {/* paragrafo al centro */}
-                    <div style={{margin: 'auto'}}>
+                    <div style={{ margin: 'auto' }}>
                         <p className="lead" >
-                            {summary}
+                            {renderWithBold(summary)}
                         </p>
                     </div>
                 </div>

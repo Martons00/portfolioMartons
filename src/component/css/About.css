@@ -1,0 +1,15 @@
+.about-title-wrapper {
+    width: 95%;          /* il wrapper prende il 95% della colonna */
+    margin: 0 auto;      /* centrato nella colonna */
+}
+
+.about-title {
+    font-size: 3rem;     /* o clamp(...) se vuoi sia fluido */
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-section {
+    padding-bottom: 2rem;
+}

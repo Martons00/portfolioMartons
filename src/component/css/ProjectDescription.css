@@ -10,6 +10,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
+
 .project-placeholder {
     display: flex;
     height: 100%;
@@ -24,14 +25,14 @@
 
 .project-description h2 {
     margin: 0 0 16px 0;
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
 }
 
 .project-description__text {
     line-height: 1.6;
     color: #ccc;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .project-description__tools {

@@ -4,6 +4,23 @@ import { FaGithub } from 'react-icons/fa';
 import './css/ProjectDescription.css'
 import './css/Tools.css';
 
+
+const renderWithBold = (text) => {
+  if (!text) return null;
+  
+  const parts = String(text).split('**');
+  return (
+    <span>
+      {parts.map((part, idx) => 
+        idx % 2 === 1 
+          ? <strong key={`bold-${idx}`}>{part}</strong> 
+          : part
+      )}
+    </span>
+  );
+};
+
+
 const ProjectDescription = ({ currentIndex }) => {
     const project = projects[currentIndex]
 
@@ -25,8 +42,14 @@ const ProjectDescription = ({ currentIndex }) => {
 
     return (
         <div className="project-description">
+            <div>
+                <div>
             <h2>{project.name}</h2>
-            <p className="project-description__text">{project.description}</p>
+                </div>
+                <div style={{paddingTop: '40px'}}>
+            <p className="project-description__text">{renderWithBold(project.description)}</p>
+            </div>
+            </div>
             {project.link && (
                 <div className="program-icon-item project-description__link">
                     <span className="icon">{<FaGithub />}</span>

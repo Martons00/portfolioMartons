@@ -7,7 +7,7 @@
     "linkedin": "linkedin.com/in/raffaele-martone00/",
     "github": "github.com/Martons00"
   },
-  "summary": "Computer Engineering graduate student specializing in Artificial Intelligence and Data Analytics with hands-on experience in developing neural networks, machine learning models, and computer vision applications.",
+  "summary": "**Computer Engineering** **graduate student** specializing in **Artificial Intelligence** and **Data Analytics** con **hands-on experience** nello **sviluppo** di **neural networks**, **machine learning models** e **computer vision applications**.",
   "education": [
     {
       "institution": "Politecnico di Torino",
@@ -80,49 +80,49 @@
     {
         "name": "Organoid Image Classification Using Deep Learning",
         "link": "https://github.com/Martons00/Organoid-Image-Classification-Using-Deep-Learning",
-        "description": "A comprehensive deep learning framework for 3D medical image classification of organoids using state-of-the-art transformer and CNN architectures.",
+        "description": "A comprehensive **deep learning framework** for **3D medical image classification** of **organoids** using state-of-the-art **transformer** and **CNN architectures**.",
         "tools": ["Python", "Machine Learning", "Deep Learning", "Transformers", "PyTorch", "Medical Imaging"]
     },
     {
       "name": "PolitoSbobinatore",
       "link": "https://github.com/Martons00/PolitoSbobinatore",
-      "description": "An AI model chain designed to simplify note taking at university by automating transcription and organization processes",
+      "description": "An **AI model chain** designed to simplify **note taking** at university by automating **transcription** and **organization processes**",
       "tools": ["Python", "Jupyter Notebook", "PyTorch", "Selenium Web-Scraper", "OpenAI-Whisper", "Hugging Face"]
     },
     {
       "name": "Real-Time Domain Adaptation for Semantic Segmentation",
       "link": "https://github.com/Martons00/Real-time-Domain-Adaptation-in-Semantic-Segmentation",
-      "description": "Investigated domain adaptation techniques for semantic segmentation using state-of-the-art models like DeepLabv3, PIDNet, and MSNet on the LostAndFound dataset. Explored methods such as data augmentation, adversarial learning, DACS, PEM, and CycleGAN to tackle domain shifts between urban and rural environments",
+      "description": "Investigated **domain adaptation techniques** for **semantic segmentation** using state-of-the-art models like **DeepLabv3**, **PIDNet**, and **MSNet** on the **LostAndFound dataset**. Explored methods such as **data augmentation**, **adversarial learning**, **DACS**, **PEM**, and **CycleGAN** to tackle **domain shifts** between urban and rural environments",
       "tools": ["Python", "Jupyter Notebook", "PyTorch", "Google Colab"]
     },
     {
       "name": "Model Depth Conversion for Autonomous Vehicles",
       "link": "https://github.com/Martons00/modelDeth-MAN-TruckScenes",
-      "description": "Developed a model to convert depth heatmaps to depth values in meters for MAN TruckScenes dataset. Implements processing pipeline for autonomous vehicle perception systems",
+      "description": "Developed a model to convert **depth heatmaps** to **depth values in meters** for **MAN TruckScenes dataset**. Implements **processing pipeline** for **autonomous vehicle perception systems**",
       "tools": ["Python", "PyTorch", "Computer Vision", "3D Data Processing"]
     },
     {
       "name": "Nostos: Excursion Navigation Application",
       "link": "https://github.com/Fettine-Panate/Nostos",
-      "description": "An application designed to help excursionists get back to their starting point when lost during hiking or outdoor sessions. Implements navigation algorithms to compute optimal return routes",
+      "description": "An application designed to help **excursionists** get back to their starting point when lost during **hiking** or **outdoor sessions**. Implements **navigation algorithms** to compute **optimal return routes**",
       "tools": ["Swift","iOS", "Location Services", "Algorithm Design"]
     },
     {
       "name": "Context-Aware GUI Testing for Mobile Applications using LLMs",
       "link": "https://github.com/Martons00/Context-Aware-GUI-Testing-for-Mobile-Applications-using-LLMs",
-      "description": "Developed a framework leveraging Large Language Models for intelligent GUI testing of mobile applications. Utilizes context awareness to improve test case generation and automated testing of user interfaces",
+      "description": "Developed a framework leveraging **Large Language Models** for **intelligent GUI testing** of **mobile applications**. Utilizes **context awareness** to improve **test case generation** and **automated testing** of user interfaces",
       "tools": ["Python", "LLMs", "Mobile Testing", "Natural Language Processing"]
     },
     {
       "name": "Junky Storm",
       "link": "https://github.com/UBG-Inc/Junky-Storm",
-      "description": "This is an Arcade Game created by the UBG team. Starting with Gubby that wants to give back to humans all the food that aliens stoled from the Earth, but unfortunately he doesn't like bananas.. and aliens know it.",
+      "description": "This is an **Arcade Game** created by the UBG team. Starting with Gubby that wants to give back to humans all the food that aliens stoled from the Earth, but unfortunately he doesn't like bananas.. and aliens know it.",
       "tools": ["Swift", "iOS", "Game Development", "SpriteKit"]
     },
        {
       "name": "Semi-Supervised Learning for Mesothelioma Classification",
       "link": "https://github.com/LucaIanniello/Semi-Supervised-Learning-for-Mesothelioma-Classification",
-      "description": "Implemented semi-supervised learning techniques for mesothelioma disease classification using medical imaging data. Addresses the challenge of limited labeled data in medical diagnosis through advanced machine learning methodologies",
+      "description": "Implemented **semi-supervised learning techniques** for **mesothelioma disease classification** using **medical imaging data**. Addresses the challenge of **limited labeled data** in **medical diagnosis** through advanced **machine learning methodologies**",
       "tools": ["Python", "PyTorch", "Semi-Supervised Learning", "Medical Image Analysis"]
     }
   ],
