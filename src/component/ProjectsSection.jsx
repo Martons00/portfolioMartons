@@ -2,7 +2,6 @@
 import { NavLink } from 'react-router-dom'
 import { Row, Col } from 'react-bootstrap'
 import { FaGithub } from 'react-icons/fa'
-import MonitorsScenePreview from './scene/MonitorsScenePreview'
 import './css/ProjectDescription.css'
 import './css/Tools.css';
 
@@ -17,7 +16,11 @@ export default function ProjectsSection() {
           zIndex: 0
         }}
       >
-        <MonitorsScenePreview />
+        <img
+          src="/portfolioMartons/monitorsScenePreview.webp"
+          alt="Monitors Scene Preview"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
       </div>
 
       {/* OVERLAY CONTENUTI */}

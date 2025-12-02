@@ -24,7 +24,7 @@ export default function LaptopScene() {
       powerPreference: 'high-performance',
       precision: 'highp'
     })
-    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // limita il pixel ratio
     renderer.setSize(container.clientWidth, container.clientHeight)
     renderer.outputColorSpace = THREE.SRGBColorSpace
     renderer.toneMapping = THREE.ACESFilmicToneMapping

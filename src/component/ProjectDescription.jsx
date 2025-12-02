@@ -6,18 +6,18 @@ import './css/Tools.css';
 
 
 const renderWithBold = (text) => {
-  if (!text) return null;
-  
-  const parts = String(text).split('**');
-  return (
-    <span>
-      {parts.map((part, idx) => 
-        idx % 2 === 1 
-          ? <strong key={`bold-${idx}`}>{part}</strong> 
-          : part
-      )}
-    </span>
-  );
+    if (!text) return null;
+
+    const parts = String(text).split('**');
+    return (
+        <span>
+            {parts.map((part, idx) =>
+                idx % 2 === 1
+                    ? <strong key={`bold-${idx}`}>{part}</strong>
+                    : part
+            )}
+        </span>
+    );
 };
 
 
@@ -26,16 +26,18 @@ const ProjectDescription = ({ currentIndex }) => {
 
     if (!project) {
         return (
-            <div className="project-placeholder">
-                <video
-                    src="/portfolioMartons/placeholderProjects.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="project-description__video"
-                    style={{ width: '100%',  objectFit: 'cover' }}
-                />
+            <div className="project-placeholder"><video
+                src="/portfolioMartons/placeholderProjects.webm"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="project-description__video"
+                style={{ width: '100%', objectFit: 'cover' }}
+            >
+                Your browser does not support the video tag.
+            </video>
+
             </div>
         )
     }
@@ -44,11 +46,11 @@ const ProjectDescription = ({ currentIndex }) => {
         <div className="project-description">
             <div>
                 <div>
-            <h2>{project.name}</h2>
+                    <h2>{project.name}</h2>
                 </div>
-                <div style={{paddingTop: '40px'}}>
-            <p className="project-description__text">{renderWithBold(project.description)}</p>
-            </div>
+                <div style={{ paddingTop: '40px' }}>
+                    <p className="project-description__text">{renderWithBold(project.description)}</p>
+                </div>
             </div>
             {project.link && (
                 <div className="program-icon-item project-description__link">

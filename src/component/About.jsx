@@ -9,18 +9,18 @@ import './css/About.css';
 import { randInt } from 'three/src/math/MathUtils.js';
 
 const renderWithBold = (text) => {
-  if (!text) return null;
-  
-  const parts = String(text).split('**');
-  return (
-    <span>
-      {parts.map((part, idx) => 
-        idx % 2 === 1 
-          ? <strong key={`bold-${idx}`}>{part}</strong> 
-          : part
-      )}
-    </span>
-  );
+    if (!text) return null;
+
+    const parts = String(text).split('**');
+    return (
+        <span>
+            {parts.map((part, idx) =>
+                idx % 2 === 1
+                    ? <strong key={`bold-${idx}`}>{part}</strong>
+                    : part
+            )}
+        </span>
+    );
 };
 
 
@@ -45,9 +45,10 @@ const About = () => {
         <div className="homepage">
             <Row className="about-title-wrapper">
                 <video autoPlay loop muted className="about-video-background">
-                    <source src="/portfolioMartons/aboutMe.mp4" type="video/mp4" />
+                    <source src="/portfolioMartons/aboutMe.webm" type="video/webm" />
                     Your browser does not support the video tag.
                 </video>
+
             </Row>
 
             {/* Mappare dinamicamente le sezioni */}
@@ -81,7 +82,7 @@ const MySection = ({ type, size, heading, paragraphs, img, caption }) => {
     if (type === 0) {
         return (
             <Row className="about-section">
-                <Col lg={size} style={{ paddingLeft: '50px',paddingRight: '50px', minHeight: '350px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', textAlign: 'left' }}>
+                <Col lg={size} style={{ paddingLeft: '50px', paddingRight: '50px', minHeight: '350px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', textAlign: 'left' }}>
                     {textContent}
                 </Col>
 
@@ -106,7 +107,7 @@ const MySection = ({ type, size, heading, paragraphs, img, caption }) => {
     } else if (type === 1) {
         return (
             <Row className="about-section">
-                <Col lg={size} style={{  minHeight: '350px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Col lg={size} style={{ minHeight: '350px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <TiltedCard
                         imageSrc={img}
                         altText={caption}
@@ -121,7 +122,7 @@ const MySection = ({ type, size, heading, paragraphs, img, caption }) => {
                         showTooltip={true}
                     />
                 </Col>
-                <Col lg={12 - size} style={{ minHeight: '350px',paddingRight: '50px', paddingLeft: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', textAlign: 'left' }}>
+                <Col lg={12 - size} style={{ minHeight: '350px', paddingRight: '50px', paddingLeft: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', textAlign: 'left' }}>
                     {textContent}
                 </Col>
 

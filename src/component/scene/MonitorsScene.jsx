@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { projects } from '../../data/resumeData.json'
 
+
 export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
   const mountRef = useRef(null)
 
@@ -80,7 +81,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
       powerPreference: 'high-performance',
       precision: 'highp'
     })
-    renderer.setPixelRatio(window.devicePixelRatio)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // limita il pixel ratio
     renderer.setSize(container.clientWidth, container.clientHeight)
     renderer.outputColorSpace = THREE.SRGBColorSpace
     renderer.toneMapping = THREE.ACESFilmicToneMapping
@@ -183,7 +184,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
       ctx.font = `${size * 0.4}px sans-serif`
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
-      ctx.fillText(parseInt(label)+1, size / 2, size / 2)
+      ctx.fillText(parseInt(label) + 1, size / 2, size / 2)
 
       const texture = new THREE.CanvasTexture(canvas)
       const material = new THREE.SpriteMaterial({ map: texture, transparent: true })
@@ -222,7 +223,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
     // ========= LOADER =========
     const loader = new GLTFLoader()
     loader.load(
-      '/portfolioMartons/models/monitors.glb',
+      'https://cdn.jsdelivr.net/gh/Martons00/portfolioMartons@main/public/models/monitors.glb',
       (gltf) => {
         const model = gltf.scene
         model.position.set(0, 0, 0)
@@ -330,13 +331,28 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
     }
 
     return () => {
-      window.removeEventListener('resize', onResize)
-      renderer.domElement.removeEventListener('click', onClick)
-      controls.dispose()
-      renderer.dispose()
-      container.removeChild(renderer.domElement)
-      delete window.jumpToView
-    }
+      window.removeEventListener('resize', onResize);
+      renderer.domElement.removeEventListener('click', onClick);
+
+      controls.dispose();
+      renderer.dispose();
+
+      // libera geometrie/materiali
+      scene.traverse(obj => {
+        if (obj.geometry) obj.geometry.dispose();
+        if (obj.material) {
+          if (Array.isArray(obj.material)) {
+            obj.material.forEach(m => m.dispose && m.dispose());
+          } else {
+            obj.material.dispose && obj.material.dispose();
+          }
+        }
+      });
+
+      container.removeChild(renderer.domElement);
+      delete window.jumpToView;
+    };
+
   }, [])
 
   // UI frecce + base
@@ -413,3 +429,8 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
     </div>
   )
 }
+
+// in fondo al file MonitorsScene.jsx
+import { useGLTF } from '@react-three/drei';
+
+useGLTF.preload('/portfolioMartons/models/monitors.glb');
