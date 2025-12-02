@@ -4,7 +4,7 @@
 }
 
 .about-title {
-    font-size: 3rem;     /* o clamp(...) se vuoi sia fluido */
+    font-size: 2rem;     /* o clamp(...) se vuoi sia fluido */
     font-weight: bold;
     margin-bottom: 2rem;
     text-align: center;

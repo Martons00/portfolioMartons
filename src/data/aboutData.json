@@ -1,5 +1,6 @@
 {
     "title": "About Me",
+    "intro": "Hello! I'm Raffaele Martone, a **25-year-old AI enthusiast** with a background in **engineering consulting** and a passion for **dance**. Originally from **Arienzo**, Italy, I now live in **Nice, France**. My journey has been anything but linear, blending technical rigor with creative expression. Here's a deeper look into who I am, what drives me, and where I'm headed.",
     "sections": [
         {
             "heading": "Origins & Identity",
@@ -10,7 +11,7 @@
         {
             "heading": "Who I Am",
             "paragraphs": [
-                "At **25**, I'd describe myself as paradoxically **social yet solitary**. I thrive on challenging myself, though I'm my own harshest critic—I simply cannot leave things unfinished. I carry a **dual nature**: the **analytical mind** of an engineer paired with the **creative spirit** of a dancer and performer. This duality isn't a contradiction for me; it's the core of how I approach **problem-solving** and creation. The tension between these two sides pushes me to think differently and build better.",
+                "At **25**, I'd describe myself as paradoxically **social**. I thrive on challenging myself, though I'm my own harshest critic—I simply cannot leave things unfinished. I carry a **dual nature**: the **analytical mind** of an engineer paired with the **creative spirit** of a dancer and performer. This duality isn't a contradiction for me; it's the core of how I approach **problem-solving** and creation. The tension between these two sides pushes me to think differently and build better.",
                 "Living away from home first in Turin, then abroad in Nice, has been **transformative**. It's forced me to confront who I am outside my comfort zone, accelerating my **self-discovery** and pushing me to become more **independent** and intentional about my choices."
             ]
         },

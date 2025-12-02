@@ -82,6 +82,7 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
       precision: 'highp'
     })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // limita il pixel ratio
+    //renderer.setPixelRatio(window.devicePixelRatio)
     renderer.setSize(container.clientWidth, container.clientHeight)
     renderer.outputColorSpace = THREE.SRGBColorSpace
     renderer.toneMapping = THREE.ACESFilmicToneMapping
