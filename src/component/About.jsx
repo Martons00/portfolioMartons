@@ -43,11 +43,18 @@ const About = () => {
 
     return (
         <div className="homepage">
-            <Row className="about-title-wrapper">
-                <video autoPlay loop muted className="about-video-background">
-                    <source src="/portfolioMartons/aboutMe.webm" type="video/webm" />
-                    Your browser does not support the video tag.
-                </video>
+            <Row className="about-title-wrapper"><video
+                autoPlay
+                loop
+                muted
+                playsInline
+                webkit-playsinline="true"
+                controls={false}
+                className="about-video-background"
+            >
+                <source src="/portfolioMartons/aboutMe.webm" type="video/webm" />
+                Your browser does not support the video tag.
+            </video>
 
             </Row>
 
