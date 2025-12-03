@@ -83,7 +83,7 @@ export default function HeroSection({ personalInfo, summary }) {
 
                 {/* blocco link in fondo */}
                 <Row className="mt-3">
-                    <Col>
+                    <Col md={4} xs={12} style={{paddingBottom: '1rem'}}>
                         <div className="program-icon-item project-description__link">
                             <span className="icon"><FaGithub /></span>
                             <a
@@ -97,7 +97,7 @@ export default function HeroSection({ personalInfo, summary }) {
                             </a>
                         </div>
                     </Col>
-                    <Col>
+                    <Col md={4} xs={12} style={{paddingBottom: '1rem'}}>
                         <div className="program-icon-item project-description__link">
                             <span className="icon"><FaFilePdf /></span>
                             <a
@@ -111,7 +111,7 @@ export default function HeroSection({ personalInfo, summary }) {
                         </div>
 
                     </Col>
-                    <Col>
+                    <Col md={4} xs={12}>
                         <div className="program-icon-item project-description__link">
                             <span className="icon"><FaLinkedin /></span>
                             <a
