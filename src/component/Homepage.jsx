@@ -23,8 +23,7 @@ import {
     SiGit,
     SiHuggingface,      // Hugging Face
     SiNumpy,            // NumPy
-    SiMatplotlib,       // Matplotlib
-    SiNodejs,           // Node.js
+    SiNodedotjs,           // Node.js
     SiMysql,            // MySQL
     SiFigma,            // Figma
     SiSelenium,         // Selenium
@@ -46,8 +45,7 @@ const techLogos = [
     { node: <SiLinux color="#ffffff" />, title: "Linux", href: "https://www.linux.org" },
     { node: <SiJupyter color="#ffffff" />, title: "Jupyter", href: "https://jupyter.org" },
     { node: <SiGit color="#ffffff" />, title: "Git", href: "https://git-scm.com" },
-    { node: <SiMatplotlib color="#ffffff" />, title: "Matplotlib", href: "https://matplotlib.org" },
-    { node: <SiNodejs color="#ffffff" />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiNodedotjs color="#ffffff" />, title: "Node.js", href: "https://nodejs.org" },
     { node: <SiMysql color="#ffffff" />, title: "MySQL", href: "https://www.mysql.com" },
     { node: <SiFigma color="#ffffff" />, title: "Figma", href: "https://www.figma.com" },
     { node: <SiSelenium color="#ffffff" />, title: "Selenium", href: "https://www.selenium.dev" },
