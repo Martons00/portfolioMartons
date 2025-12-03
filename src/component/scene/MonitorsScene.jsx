@@ -332,16 +332,13 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
     }
 
     return () => {
-      window.removeEventListener('resize', onResize);
-      renderer.domElement.removeEventListener('click', onClick);
-
-      controls.dispose();
-      renderer.dispose();
-
-
-      container.removeChild(renderer.domElement);
-      delete window.jumpToView;
-    };
+      window.removeEventListener('resize', onResize)
+      renderer.domElement.removeEventListener('click', onClick)
+      controls.dispose()
+      renderer.dispose()
+      container.removeChild(renderer.domElement)
+      delete window.jumpToView
+    }
 
   }, [])
 
@@ -420,7 +417,3 @@ export default function MonitorsScene({ currentIndex, setCurrentIndex }) {
   )
 }
 
-// in fondo al file MonitorsScene.jsx
-import { useGLTF } from '@react-three/drei';
-
-useGLTF.preload('/portfolioMartons/models/monitors.glb');
