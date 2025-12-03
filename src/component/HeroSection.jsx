@@ -3,7 +3,7 @@
 
 import PixelBlast from './scene/PixelBlast'
 import { Row, Col } from 'react-bootstrap'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin,FaFilePdf } from 'react-icons/fa'
 import { NavLink } from 'react-router-dom' // se ti serve in futuro
 import './css/Homepage.css'
 import { TextType } from './CustomText'
@@ -96,6 +96,20 @@ export default function HeroSection({ personalInfo, summary }) {
                                 GitHub Profile
                             </a>
                         </div>
+                    </Col>
+                    <Col>
+                        <div className="program-icon-item project-description__link">
+                            <span className="icon"><FaFilePdf /></span>
+                            <a
+                                href="/portfolioMartons/Raffaele_Martone_Resume.pdf"
+                                download="Raffaele_Martone_Resume.pdf"
+                                className="label"
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                                Curriculum Vitae
+                            </a>
+                        </div>
+
                     </Col>
                     <Col>
                         <div className="program-icon-item project-description__link">

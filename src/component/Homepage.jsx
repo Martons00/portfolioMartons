@@ -20,7 +20,17 @@ import {
     SiSwift,
     SiLinux,
     SiJupyter,
-    SiGit
+    SiGit,
+    SiHuggingface,      // Hugging Face
+    SiNumpy,            // NumPy
+    SiMatplotlib,       // Matplotlib
+    SiNodejs,           // Node.js
+    SiMysql,            // MySQL
+    SiFigma,            // Figma
+    SiSelenium,         // Selenium
+    SiArduino,          // Arduino
+    SiRaspberrypi,      // Raspberry Pi
+    SiAndroidstudio     // Android Studio
 } from 'react-icons/si';
 
 const techLogos = [
@@ -30,12 +40,23 @@ const techLogos = [
     { node: <SiJavascript color="#ffffff" />, title: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
     { node: <SiPython color="#ffffff" />, title: "Python", href: "https://www.python.org" },
     { node: <SiPytorch color="#ffffff" />, title: "PyTorch", href: "https://pytorch.org" },
+    { node: <SiHuggingface color="#ffffff" />, title: "Hugging Face", href: "https://huggingface.co" },
+    { node: <SiNumpy color="#ffffff" />, title: "NumPy", href: "https://numpy.org" },
     { node: <SiSwift color="#ffffff" />, title: "Swift", href: "https://swift.org" },
     { node: <SiLinux color="#ffffff" />, title: "Linux", href: "https://www.linux.org" },
     { node: <SiJupyter color="#ffffff" />, title: "Jupyter", href: "https://jupyter.org" },
-    { node: <SiCplusplus color="#ffffff" />, title: "C++", href: "https://isocpp.org" },
     { node: <SiGit color="#ffffff" />, title: "Git", href: "https://git-scm.com" },
+    { node: <SiMatplotlib color="#ffffff" />, title: "Matplotlib", href: "https://matplotlib.org" },
+    { node: <SiNodejs color="#ffffff" />, title: "Node.js", href: "https://nodejs.org" },
+    { node: <SiMysql color="#ffffff" />, title: "MySQL", href: "https://www.mysql.com" },
+    { node: <SiFigma color="#ffffff" />, title: "Figma", href: "https://www.figma.com" },
+    { node: <SiSelenium color="#ffffff" />, title: "Selenium", href: "https://www.selenium.dev" },
+    { node: <SiCplusplus color="#ffffff" />, title: "C++", href: "https://isocpp.org" },
+    { node: <SiRaspberrypi color="#ffffff" />, title: "Raspberry Pi", href: "https://www.raspberrypi.org" },
+    { node: <SiArduino color="#ffffff" />, title: "Arduino", href: "https://www.arduino.cc" },
+    { node: <SiAndroidstudio color="#ffffff" />, title: "Android Studio", href: "https://developer.android.com/studio" },
 ];
+
 
 
 

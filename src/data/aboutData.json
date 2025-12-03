@@ -1,6 +1,6 @@
 {
     "title": "About Me",
-    "intro": "Hello! I'm Raffaele Martone, a **25-year-old AI enthusiast** with a background in **engineering consulting** and a passion for **dance**. Originally from **Arienzo**, Italy, I now live in **Nice, France**. My journey has been anything but linear, blending technical rigor with creative expression. Here's a deeper look into who I am, what drives me, and where I'm headed.",
+    "intro": "Hello! I'm Raffaele Martone, a **25-year-old AI enthusiast** with a background in **engineering consulting** and a passion for **dance**.",
     "sections": [
         {
             "heading": "Origins & Identity",
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "heading": "Career Vision",
+            "heading": "'I want the thing that's not in front of me now.'",
             "paragraphs": [
                 "I'm looking to join a company where I can continuously **push boundaries**—a place that encourages **experimentation** with **emerging technologies** rather than settling into repetition. I want to keep **learning**, **iterating**, and avoiding the trap of doing the same thing year after year. Consulting taught me what I don't want; now I'm searching for an environment where **growth** and **innovation** are the core rhythm, not the exception."
             ]
